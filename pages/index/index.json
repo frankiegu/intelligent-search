@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "product-item": "../../components/product-item/product-item"
+  }
+}

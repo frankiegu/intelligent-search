@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/merber-center/merber-center",
+    "pages/my-collect/my-collect",
+    "pages/buy-history/buy-history",
+    "pages/watch-history/watch-history",
+    "pages/product-detail/product-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3399EE",
+    "navigationBarTitleText": "FlushBuy",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#3399EE",
+    "backgroundColor": "#efefef",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-on.png"
+      },
+      {
+        "pagePath": "pages/merber-center/merber-center",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-on.png"
+      }
+    ]
+  },
+  "debug": false
+}
