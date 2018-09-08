@@ -1,0 +1,134 @@
+.card {
+    border-radius: 30rpx;
+    height: 260rpx;
+    background: #fff;
+    margin-bottom: 1rpx;
+    padding-bottom: 20rpx;
+    box-sizing: border-box;
+}
+
+.shop-icon {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 10rpx;
+}
+
+.shop-name {
+    font-size: 26rpx;
+}
+
+.description {
+    line-height: 38rpx;
+}
+
+.buy-detail_shop {
+    display: flex;
+    padding: 10rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+
+.shop {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: space-between;
+    padding: 10rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+}
+
+.buy-detail_status {
+    color: #f02b2b;
+}
+
+.buy-detail_product {
+    display: flex;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+}
+
+.detail-img {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 10rpx;
+}
+
+.introduce {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex: 1;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.introduce-tips,
+.introduce-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.introduce-tips {
+    width: 420rpx;
+}
+
+.introduce-number {
+    text-align: right;
+}
+
+.product-color {
+    padding: 0 5rpx;
+    box-sizing: border-box;
+    color: #999;
+    font-size: 20rpx;
+    border-radius: 4rpx;
+    width: 99rpx;
+    background: #f0f2f5;
+    text-align: center;
+}
+
+.number-count {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.number-price {
+    margin-top:10rpx;
+    font-weight: 700;
+    color: #f02b2b;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+}
+
+.minus,
+.add {
+    width: 64rpx;
+    height: 64rpx;
+    border: 1px solid #e3e5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 18rpx;
+    height: 18rpx;
+}
+
+.num {
+    width: 64rpx;
+    height: 64rpx;
+    border: 1px solid #e3e5e9;
+    border-left: none;
+    border-right: none;
+    font-size: 28rpx;
+    color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

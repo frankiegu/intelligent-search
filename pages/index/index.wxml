@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <search searchKey="{{searchKey}}" bind:onSearch="fnSearch"></search>
-  <view>
+    <search searchKey="{{searchKey}}" bind:onSearch="fnSearch"></search>
+    <view>
     <product-item wx:for="{{pageData}}" wx:key="index" data="{{item}}"
-                  bind:detail="fnGoDeatil">
+    bind:detail="fnGoDeatil">
     </product-item>
     <empty wx:if="{{!pageData.length && !isLoading}}"></empty>
-  </view>
+    </view>
 </view>

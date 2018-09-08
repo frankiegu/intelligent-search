@@ -21,23 +21,20 @@ Component({
                 productImgs: [],
                 productSizes: [],
                 types:'',
-                state:''
             },
             observer(newVal, oldVal) {
                 this.changeData(newVal)
-            }
-        },
-        state: {
-            type: String,
-            value: ''
-        }
+            },
+        }     
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-        item: {}
+        item: {},
+        count: 0,
+        unableReduce: true //减号置灰
     },
 
     /**
@@ -46,7 +43,7 @@ Component({
     methods: {
         changeData(data) {
             this.setData({
-              item: data
+              item: data,
             })
             return data
           },
@@ -57,6 +54,33 @@ Component({
               })
               console.log('buy-detail',this.data.item)   
             this.triggerEvent('detail')
-        }
+        },
+         /**
+         * 点击数量
+         */
+        minusProbability() {
+            if (this.data.unableReduce) {
+                return
+              }
+            this.setData({
+                count: this.data.count - 1,
+            })
+            if (this.data.count === 0) {
+                this.setData({
+                    unableReduce: true
+                })
+                return
+            }
+        },
+        /**
+         * 点击增加数量
+         */
+        addProbability() {
+            console.log(1111)
+            this.setData({
+                count: this.data.count + 1,
+                unableReduce: false
+            })
+        },
     }
-})  
+})

@@ -50,7 +50,7 @@ Component({
         key: STORAGE_KEY.PRODUCT_DETAIL,
         data: this.data.item,
       })
-      console.log('&****',this.data.item)      
+      console.log('product-item',this.data.item)      
       this.triggerEvent('detail')
     }
   }

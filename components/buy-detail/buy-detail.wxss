@@ -1,93 +1,93 @@
 .buy-detail {
-    background: #fff;
-    margin-bottom: 15rpx;
-    padding-bottom: 20rpx;
-    box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 1rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
 }
 
 .shop-icon {
-    width: 40rpx;
-    height: 40rpx;
-    margin-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
 }
 
 .shop-name {
-    font-size: 26rpx;
+  font-size: 26rpx;
 }
 
 .description {
-    line-height: 38rpx;
+  line-height: 38rpx;
 }
 
 .buy-detail_shop {
-    display: flex;
-    padding: 10rpx;
-    padding-left: 20rpx;
-    box-sizing: border-box;
+  display: flex;
+  padding: 10rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
 }
 
 .shop {
-    display: flex;
-    flex: 1;
-    align-content: center;
-    justify-content: space-between;
-    padding: 10rpx;
-    box-sizing: border-box;
-    font-size: 26rpx;
+  display: flex;
+  flex: 1;
+  align-content: center;
+  justify-content: space-between;
+  padding: 10rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
 }
 
 .buy-detail_status {
-    color: #f02b2b;
+  color: #f02b2b;
 }
 
 .buy-detail_product {
-    display: flex;
-    padding: 0 20rpx;
-    box-sizing: border-box;
-    font-size: 26rpx;
+  display: flex;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
 }
 
 .detail-img {
-    width: 150rpx;
-    height: 150rpx;
-    border-radius: 7rpx;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 7rpx;
 }
 
 .introduce {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    flex: 1;
-    padding: 0 10rpx;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex: 1;
+  padding: 0 10rpx;
+  box-sizing: border-box;
 }
 
 .introduce-tips,
 .introduce-number {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .introduce-tips {
-    width: 420rpx;
+  width: 420rpx;
 }
 
 .introduce-number {
-    text-align: right;
+  text-align: right;
 }
 
 .product-color {
-    padding: 5rpx 0;
-    box-sizing: border-box;
-    color: #999;
-    font-size: 24rpx;
+  padding: 5rpx 0;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 22rpx;
 }
 
 .number-count {
-    font-size: 24rpx;
-    color: #999;
+  font-size: 24rpx;
+  color: #999;
 }
 
 .number-price {
-    font-weight: 700;
+  font-weight: 700;
 }
