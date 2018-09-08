@@ -1,7 +1,7 @@
 /* components/product-item/product-item.wxss */
 
 .product-item-wrap {
-    margin: 20rpx 30rpx 0;
+    margin: 20rpx 20rpx 0;
     display: flex;
     border-radius: 6rpx;
     overflow: hidden;
@@ -36,11 +36,15 @@
     color: #ef533f;
     font-weight: bold;
     margin-bottom: 10rpx;
+    justify-content: space-between;
 }
-
+.product-desc{
+    text-align: justify;
+}
 .product-rate {
+    display: block;
     width: 120rpx;
-    margin-top: -60rpx;
+    margin-top: 10rpx;
     border: 1rpx solid #ef533f;
     border-radius: 20rpx;
     text-align: center;
@@ -55,11 +59,12 @@
 }
 
 .product-buy-count {
+    font-size: 24rpx;
     color: #9c9c9c;
     margin-left: 30rpx;
 }
 
 .more {
     font-size: 32rpx;
-    margin-left: 50rpx;
+    margin-left: 30rpx;
 }
