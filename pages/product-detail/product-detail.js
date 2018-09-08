@@ -35,7 +35,8 @@ Page({
                 let {productImgs, productSizes} = res.data && res.data;
                 _this.setData({
                     productSizes: productSizes,
-                    productDetail: res.data
+                    productDetail: res.data,
+                    matchSize: productSizes[res.data.productSizeIndex]
                 });
                 let bannerImg = _this.data.productDetail.productImgs.filter(element => {
                     return element.type === 'SHORT_IMAG';
@@ -123,6 +124,11 @@ Page({
     openSelectPanel () {
         this.setData({
             showSelectProductPanel: true
+        })
+    },
+    hideSelectPanel () {
+        this.setData({
+            showSelectProductPanel: false
         })
     },
     // 添加到购物车

@@ -29,11 +29,11 @@
     </view>
     <!-- 商品图片展示模块 -->
     <view class="img-show" wx:for="{{imgDetails}}" wx:key="{{index}}">
-        <image src="{{item.url}}" class="img-item" />
+        <image src="{{item.url}}" class="img-item {{ item.largeOne ===1 ? 'img-large_height' : 'img-small_height'  }}" />
     </view>
-    <view class="price-detail">
+    <!-- <view class="price-detail">
         <image src="https://gw.alicdn.com/tfs/TB1Yo1Js3mTBuNjy1XbXXaMrVXa-1125-960.png_640x0q85s150_.webp" class="price-detail_img" />
-    </view>
+    </view> -->
     <!-- 加入购物车 -->
     <view class="operate-btn">
         <view class="other-operate">
@@ -57,7 +57,7 @@
 
     <!-- 选择商品属性 -->
     <view class="select-pop" wx:if="{{showSelectProductPanel}}">
-        <view class="mask"></view>
+        <view class="mask" bindtap="hideSelectPanel"></view>
         <view class="select-info-wrap">
             <view class="select-item select-size">
                 <view class="select-item-title">
