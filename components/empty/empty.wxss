@@ -1,0 +1,11 @@
+/* components/empty.wxss */
+.empty-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.empty-tips{
+  margin-top: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
