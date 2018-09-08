@@ -8,9 +8,10 @@
                value="{{keyword}}"
                placeholder = "秋大衣"
                bindconfirm="fnSearch"
+               bindinput="fnInput"
                confirm-type="搜索">
         </input>
-        <icon wx:if="{{searchKeyword !== ''}}" type="clear" class="input-clear" size="16" catchtap="fnClearInput" />
+        <icon wx:if="{{keyword}}" type="clear" class="input-clear" size="16" catchtap="fnClearInput" />
     </view>
     <text class="search-btn" bindtap="fnSearch">搜索</text>
 </view>

@@ -32,8 +32,13 @@ Component({
             keyword: ''
         })
       },
-      fnSearch () {
-        console.log('搜索', this.data.keyword)
+      fnInput (e) {
+          console.log('正在输入', this.data.keyword, e)
+          this.setData({
+              keyword: e.detail.value
+          })
+      },
+      fnSearch (e) {
         this.triggerEvent('onSearch', {keyword: this.data.keyword})
       }
   }
