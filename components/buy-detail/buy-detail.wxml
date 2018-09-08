@@ -1,0 +1,23 @@
+<wxs src="../../wxs/filter.wxs" module="filter" />
+<view class="buy-detail">
+    <view class="buy-detail_shop">
+        <image class="shop-icon" src="https://gtd.alicdn.com/tps/i4/TB1f.8ZFVXXXXXvaXXXEDhGGXXX-32-32.png"></image>
+        <view class="shop">
+            <text class="shop-name">{{data.shopName}}</text>
+            <view class="buy-detail_status">{{filter.buyStatusFilter(data.buyStatus)}}</view>
+        </view>
+    </view>
+    <view class="buy-detail_product" bindtap="onGoPath">
+        <image src="{{data.imageUrl}}" class="detail-img"></image>
+        <view class="introduce">
+            <view class="introduce-tips">
+                <text class="description">{{data.description}}</text>
+                <text class="product-color">{{data.productColor}} {{data.productSize}}</text>
+            </view>
+            <view class="introduce-number">
+                <text class="number-price">¥ {{data.productPrice}}.00</text>
+                <text class="number-count">X{{data.productCount}}</text>
+            </view>
+        </view>
+    </view>
+</view>
