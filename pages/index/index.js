@@ -28,7 +28,7 @@ Page({
             title: '加载中',
         })
         wx.request({
-            url:"https://hackathon.jd.com/hackaton//product/query",
+            url:"https://hackathon.jd.com/hackaton/product/query",
             method: 'POST',
             data: {
                 userPin: 'test1',

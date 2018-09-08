@@ -71,6 +71,7 @@
                             size="mini"
                             plain="{{true}}"
                             data-value="{{item}}"
+                            data-index="{{index}}"
                     >{{item.sizeCode}}</button>
                 </view>
             </view>

@@ -21,6 +21,7 @@ Page({
         productDetail: [],
         productSizes: [],
         matchSize: {},
+        matchSizeIndex: 0,
         showSelectProductPanel: false
     },
     /**
@@ -31,12 +32,13 @@ Page({
         console.log("options", options);
         wx.getStorage({
             key: STORAGE_KEY.PRODUCT_DETAIL,
-            success: function (res) {
+            success: res => {
                 let {productImgs, productSizes} = res.data && res.data;
                 _this.setData({
                     productSizes: productSizes,
                     productDetail: res.data,
-                    matchSize: productSizes[res.data.productSizeIndex]
+                    matchSize: productSizes[res.data.productSizeIndex],
+                    matchSizeIndex: res.data.productSizeIndex
                 });
                 let bannerImg = _this.data.productDetail.productImgs.filter(element => {
                     return element.type === 'SHORT_IMAG';
@@ -50,10 +52,10 @@ Page({
                     bannerImgs: bannerImg,
                     imgDetails: imgDetails
                 });
+                this.scanReport()
             }
         });
 
-        this.scanReport()
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -118,7 +120,8 @@ Page({
     // 选择尺寸
     selectSize (e) {
         this.setData({
-            matchSize: e.target.dataset.value
+            matchSize: e.target.dataset.value,
+            matchSizeIndex: e.target.dataset.index
         })
     },
     openSelectPanel () {
@@ -140,13 +143,15 @@ Page({
                 userPin: 'test1',
                 productId: this.data.productDetail.id,
                 amount: this.data.buyCount,
-                productSize: this.data.matchSize
+                productSize: this.data.matchSizeIndex
             },
             success: res => {
                 let data = res.data
                 if (data && data.success) {
-                    this.setData({
-                        isFavorite: !this.data.isFavorite
+                    wx.showToast({
+                        title: '已成功加入了购物车',
+                        icon: 'success',
+                        duration: 2000
                     })
                 }
             },
