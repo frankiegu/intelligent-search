@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "购买足迹",
+    "usingComponents": {
+        "buy-detail": "../../components/buy-detail/buy-detail"
+    }
+}

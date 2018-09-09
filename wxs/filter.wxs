@@ -1,0 +1,29 @@
+var buyStatusFilter = function (status) {
+  switch (status) {
+    case 'WAIT_TO_PAY':
+      return '待付款'
+    case 'DONE':
+      return '交易成功'
+    case 'CANCLED':
+      return '取消订单'
+  }
+}
+
+var blikeFilter = function (status) {
+  switch (status) {
+    case 1:
+      return '连衣裙'
+    case 2:
+      return '衬衫'
+    case 3:
+      return 'T恤'
+    case 4:
+      return '卫衣'
+  }
+}
+
+
+module.exports = {
+  buyStatusFilter: buyStatusFilter,
+  blikeFilter: blikeFilter
+};

@@ -6,12 +6,28 @@
         </view>
     </view>
     <view class="buy-detail_product">
-        <image src="{{data.productImgs[0].url}}" class="detail-img"></image>
-        <view class="introduce" bindtap="onGoPath">
+        <view class="product-icon" bindtap="onChangeCheckSatus" data-select="{{ !selected }}" data-price="{{ data.salePrice }}">
+            <image src="../../images/checkbox.png" class="i-checkbox" wx:if="{{!selected}}" />
+            <image src="../../images/chackbox-select.png" class="i-checkbox-select" wx:if="{{selected}}" />
+        </view>
+        <image src="{{data.productImgs[0].url}}" class="detail-img" bindtap="onGoPath"></image>
+        <view class="introduce">
             <view class="introduce-tips">
-                <text class="description">{{data.productDesc}}</text>
-                <text class="product-color">尺寸：{{data.productSizes[0].sizeCode}}</text>
-                <text class="number-price">¥ {{data.salePrice}}.00</text>
+                <text class="description" bindtap="onGoPath">{{data.productDesc}}</text>
+                <text class="product-color">尺寸：{{productSize.sizeCode}}</text>
+                <view class="page-count">
+                    <text class="number-price">¥ {{data.salePrice}}.00</text>
+                    <view class="count">
+                        <view class="minus" bindtap="minusProbability">
+                            <image class="icon" wx:if="{{!unableReduce}}" src="../../images/icon-reduce.png"></image>
+                            <image wx:if="{{unableReduce}}" class="icon" src="../../images/icon-reduce-unable.png"></image>
+                        </view>
+                        <view class="num">{{count}}</view>
+                        <view class="add" bindtap="addProbability">
+                            <image class="icon" src="../../images/icon-add.png"></image>
+                        </view>
+                    </view>
+                </view>
             </view>
         </view>
     </view>

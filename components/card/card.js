@@ -25,7 +25,17 @@ Component({
             observer(newVal, oldVal) {
                 this.changeData(newVal)
             },
-        }     
+        },
+        productSize:{
+            type: Object,
+            value: {
+                sizeCode:''
+            }
+        }
+        // selected:{
+        //     type: Boolean,
+        //     value: false
+        // }     
     },
 
     /**
@@ -33,30 +43,37 @@ Component({
      */
     data: {
         item: {},
-        count: 0,
-        unableReduce: true //减号置灰
+        count: 1,
+        unableReduce: true, //减号置灰
+        selected: false
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
+        onChangeCheckSatus(e) {
+            console.log('eeeee',e)
+            this.setData({
+                selected: !this.data.selected
+            })
+            this.triggerEvent('select',e.currentTarget.dataset)
+        },
         changeData(data) {
             this.setData({
               item: data,
             })
             return data
           },
-        onGoPath() {
+        onGoPath(e) {
             wx.setStorage({
                 key: STORAGE_KEY.PRODUCT_DETAIL,
                 data: this.data.item,
               })
-              console.log('buy-detail',this.data.item)   
             this.triggerEvent('detail')
         },
          /**
-         * 点击数量
+         * 点击减少数量
          */
         minusProbability() {
             if (this.data.unableReduce) {
@@ -65,7 +82,7 @@ Component({
             this.setData({
                 count: this.data.count - 1,
             })
-            if (this.data.count === 0) {
+            if (this.data.count === 1) {
                 this.setData({
                     unableReduce: true
                 })
@@ -75,8 +92,7 @@ Component({
         /**
          * 点击增加数量
          */
-        addProbability() {
-            console.log(1111)
+        addProbability(e) {
             this.setData({
                 count: this.data.count + 1,
                 unableReduce: false

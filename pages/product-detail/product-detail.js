@@ -33,11 +33,13 @@ Page({
         wx.getStorage({
             key: STORAGE_KEY.PRODUCT_DETAIL,
             success: res => {
-                let {productImgs, productSizes} = res.data && res.data;
+                let {productImgs, productSizes ,productSizeIndex} = res.data && res.data;
+                if(!productSizeIndex) productSizeIndex = 0
+                console.log('res-producet-detail',res.data)
                 _this.setData({
-                    productSizes: productSizes,
+                    productSizes: productSizes || [],
                     productDetail: res.data,
-                    matchSize: productSizes[res.data.productSizeIndex],
+                    matchSize: productSizes && productSizes[productSizeIndex],
                     matchSizeIndex: res.data.productSizeIndex
                 });
                 let bannerImg = _this.data.productDetail.productImgs.filter(element => {

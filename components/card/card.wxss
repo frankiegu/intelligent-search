@@ -95,7 +95,7 @@
 }
 
 .number-price {
-    margin-top:10rpx;
+    margin-top: 10rpx;
     font-weight: 700;
     color: #f02b2b;
 }
@@ -108,11 +108,12 @@
 .minus,
 .add {
     width: 64rpx;
-    height: 64rpx;
+    height: 32rpx;
     border: 1px solid #e3e5e9;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5rpx;
 }
 
 .icon {
@@ -122,13 +123,30 @@
 
 .num {
     width: 64rpx;
-    height: 64rpx;
+    height: 32rpx;
     border: 1px solid #e3e5e9;
     border-left: none;
     border-right: none;
-    font-size: 28rpx;
+    font-size: 24rpx;
     color: #232323;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.page-count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.i-checkbox,
+.i-checkbox-select {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.product-icon {
+    align-content: center;
+    padding-top: 27px;
+    margin-right: 20rpx;
 }

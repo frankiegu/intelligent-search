@@ -1,0 +1,6 @@
+<!-- page 我的收藏页-->
+<view class="my-collect container">
+    <view wx:for="{{products.products}}" wx:key="index">
+        <product-item data="{{item}}" bind:detail="onGoDeatil"></product-item>
+    </view>
+</view>
