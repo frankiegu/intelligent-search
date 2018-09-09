@@ -1,8 +1,0 @@
-<!-- page 购买足迹-->
-<view class="buy-history container">
-    <view class="buy-history_order">
-        <view class="buy-history_item" wx:for="{{orderList}}" wx:key="index">
-            <buy-detail data="{{item.product}}" state="{{state}}" bind:detail="onGoDeatil"></buy-detail>
-        </view>
-    </view>
-</view>

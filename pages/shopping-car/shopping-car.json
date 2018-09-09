@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "购物车宝贝",
-    "usingComponents": {
-        "card": "../../components/card/card"
-    }
-}

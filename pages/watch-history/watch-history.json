@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": " 浏览足迹",
-    "usingComponents": {
-        "product-item": "../../components/product-item/product-item"
-    }
-}
