@@ -1,6 +1,6 @@
 <view class="shopping-car container">
     <view class="shopping-car_module" wx:for="{{shopcarProducts}}" wx:key="index">
-        <card data="{{item.products}}" bind:select="onGetSalePrice" productSize="{{item.productSize}}"></card>
+        <card data="{{item.products}}" bind:select="onGetSalePrice" productSize="{{item.productSize}}" bind:detail="onGoDeatil"></card>
     </view>
 </view>
 <view class="footer">

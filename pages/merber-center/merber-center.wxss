@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     margin-left: 10rpx;
+    margin-top: 10rpx;
 }
 
 .center_top-name {
@@ -26,7 +27,7 @@
 }
 
 .center_top-set {
-    margin-left: 380rpx;
+    margin-left: 65rpx;
     font-size: 28rpx;
 }
 
@@ -44,4 +45,72 @@
     flex-direction: column;
     text-align: center;
     line-height: 40rpx;
+}
+
+.center_top-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.adderss {
+    font-size: 24rpx;
+}
+
+.person {
+    display: flex;
+    height: 100rpx;
+    padding: 10rpx 30rpx;
+    border-bottom: 15rpx solid #f0f2f5
+}
+
+.person-member {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.icon-member {
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.member-text {
+    padding-left: 30rpx;
+}
+
+.person-center_container {
+    background: #f0f2f5;
+}
+
+.buy-detail {
+    font-size: 28rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.member-buy {
+    margin-left: 20rpx;
+}
+
+.icon-like {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.like {
+    font-size: 28rpx;
+    padding: 10rpx 30rpx;
+    border-bottom: 15rpx solid #f0f2f5
+}
+
+.cloth-type {
+    display:flex;
+    margin-left: 70rpx;
+    padding: 10rpx 0;
+    font-size: 26rpx;
+}
+
+.type {
+    color: #999;
+    margin-left: 20rpx;
 }

@@ -1,8 +1,13 @@
+<wxs src="../../wxs/filter.wxs" module="filter" />
 <view class="merber-center container">
     <view class="center">
         <image src="{{userInfo.personalImg}}" class="center_img"></image>
         <view class="center_top">
-            <text class="center_top-name">{{userInfo.name}}</text>
+            <view class="center_top-detail">
+                <text class="center_top-name">{{userDetail.nickname}}</text>
+                <text class="adderss">常用地址：北京市大兴区JD爱之家</text>
+                <!-- <text class="adderss">手机号： {{userDetail.phone}}</text> -->
+            </view>
             <text class="center_top-set">设置</text>
         </view>
     </view>
@@ -13,5 +18,45 @@
                 <text>{{item.name}}</text>
             </view>
         </block>
+    </view>
+</view>
+<view class="person">
+    <view class="person-member">
+        <image src="../../images/icon-height.png" class="icon-member" />
+        <view class="buy-detail">
+            <text class="member-text">身高:</text>
+            <text class="member-buy">{{userDetail.userSize.height}}</text>
+        </view>
+    </view>
+</view>
+<view class="person">
+    <view class="person-member">
+        <image src="../../images/icon-weight.png" class="icon-member" />
+        <view class="buy-detail">
+            <text class="member-text">体重:</text>
+            <text class="member-buy">{{userDetail.userSize.weight}}公斤</text>
+        </view>
+    </view>
+</view>
+<view class="person">
+    <view class="person-member">
+        <image src="../../images/icon-member.png" class="icon-member" />
+        <view class="buy-detail">
+            <text class="member-text">购物小会员</text>
+        </view>
+    </view>
+</view>
+<view class="like">
+    <view class="person-member">
+        <image src="../../images/icon-like.png" class="icon-like" />
+        <view class="buy-detail">
+            <text class="member-text">偏爱材质</text>
+        </view>
+    </view>
+    <view class="cloth-type" wx:for="{{userDetail.userPreferTypes}}" wx:key="index">
+        <view class="type-detail">
+            <text class="title">{{filter.blikeFilter(item.productCategroy)}}:</text>
+            <text class="type">{{item.types}}</text>
+        </view>
     </view>
 </view>

@@ -70,7 +70,6 @@ Component({
                 key: STORAGE_KEY.PRODUCT_DETAIL,
                 data: this.data.item,
               })
-              console.log('buy-detail',e)   
             this.triggerEvent('detail')
         },
          /**

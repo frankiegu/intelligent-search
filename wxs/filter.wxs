@@ -9,7 +9,21 @@ var buyStatusFilter = function (status) {
   }
 }
 
+var blikeFilter = function (status) {
+  switch (status) {
+    case 1:
+      return '连衣裙'
+    case 2:
+      return '衬衫'
+    case 3:
+      return 'T恤'
+    case 4:
+      return '卫衣'
+  }
+}
+
 
 module.exports = {
   buyStatusFilter: buyStatusFilter,
+  blikeFilter: blikeFilter
 };

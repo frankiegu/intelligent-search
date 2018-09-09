@@ -18,15 +18,16 @@ Page({
       personalImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtZ90CtITHRZkCTJLhu6IPSqihcsUZyZNIXWomFrj09Lk9iaz',
       name: 'Jd小迷妹'
     },
+    userDetail:{},
     detail: [
       {
         name: '收藏精品',
-        count: 722,
+        count: 72,
         path: 'myCollect'
       },
       {
         name: '购买足迹',
-        count: 81,
+        count: 15,
         path: 'buyHistory'
       },
       {
@@ -53,7 +54,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this    
+    wx.request({
+      url: 'https://hackathon.jd.com/hackaton/user/query',
+      data: {
+        userPin: 'test1'
+      },
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        let data = res.data
+        if(data && data.success) {
+            _this.setData({
+              userDetail: data.data
+            })
+        }
+        console.log('userDetail', _this.data.userDetail)        
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   },
 
   /**

@@ -116,6 +116,7 @@ Page({
      * 跳转到到商品详情页
      */
     onGoDeatil() {
+        console.log('*(*******')
         wx.navigateTo({
             url: '/pages/product-detail/product-detail'
         })
