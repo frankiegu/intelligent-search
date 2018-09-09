@@ -99,11 +99,11 @@ Page({
                 let data = res.data
                 console.log('buy-history',data)                
                 if(data.success) {
-                    let productDatas = data.data
+                    let productDatas = data.data || []
                     console.log('productData',productDatas)
                     _this.setData({
-                        state: productDatas[0].state,
-                        orderList: productDatas[0].orderProducts
+                        state: productDatas.length && productDatas[0].state,
+                        orderList: productDatas.length && productDatas[0].orderProducts
                         
                     })
                     console.log('productData',_this.data.orderList)
