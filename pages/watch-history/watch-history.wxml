@@ -1,0 +1,6 @@
+<!-- page 浏览足迹-->
+<view class="watch-history container">
+    <view wx:for="{{watchList}}" wx:key="index">
+        <product-item data="{{item}}" bind:detail="onGoDetail"></product-item>
+    </view>
+</view>

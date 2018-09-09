@@ -1,0 +1,5 @@
+<!--components/empty.wxml-->
+<view class="empty-page">
+    <image  class="empty-tips" src="../../images/empty.png"></image>
+</view>
+

@@ -1,0 +1,7 @@
+.buy-history {
+    background: #f5f5f5;
+}
+
+.buy-history_item {
+    margin-bottom: 15rpx;
+}

@@ -1,0 +1,34 @@
+<view class="card">
+    <view class="buy-detail_shop">
+        <image class="shop-icon" src="https://gtd.alicdn.com/tps/i4/TB1f.8ZFVXXXXXvaXXXEDhGGXXX-32-32.png"></image>
+        <view class="shop">
+            <text class="shop-name">{{data.shopName}}</text>
+        </view>
+    </view>
+    <view class="buy-detail_product">
+        <view class="product-icon" bindtap="onChangeCheckSatus" data-select="{{ !selected }}" data-price="{{ data.salePrice }}">
+            <image src="../../images/checkbox.png" class="i-checkbox" wx:if="{{!selected}}" />
+            <image src="../../images/chackbox-select.png" class="i-checkbox-select" wx:if="{{selected}}" />
+        </view>
+        <image src="{{data.productImgs[0].url}}" class="detail-img" bindtap="onGoPath"></image>
+        <view class="introduce">
+            <view class="introduce-tips">
+                <text class="description" bindtap="onGoPath">{{data.productDesc}}</text>
+                <text class="product-color">尺寸：{{productSize.sizeCode}}</text>
+                <view class="page-count">
+                    <text class="number-price">¥ {{data.salePrice}}.00</text>
+                    <view class="count">
+                        <view class="minus" bindtap="minusProbability">
+                            <image class="icon" wx:if="{{!unableReduce}}" src="../../images/icon-reduce.png"></image>
+                            <image wx:if="{{unableReduce}}" class="icon" src="../../images/icon-reduce-unable.png"></image>
+                        </view>
+                        <view class="num">{{count}}</view>
+                        <view class="add" bindtap="addProbability">
+                            <image class="icon" src="../../images/icon-add.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
