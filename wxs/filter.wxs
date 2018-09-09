@@ -1,0 +1,15 @@
+var buyStatusFilter = function (status) {
+  switch (status) {
+    case 'WAIT_TO_PAY':
+      return '待付款'
+    case 'DONE':
+      return '交易成功'
+    case 'CANCLED':
+      return '取消订单'
+  }
+}
+
+
+module.exports = {
+  buyStatusFilter: buyStatusFilter,
+};

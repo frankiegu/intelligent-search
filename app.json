@@ -5,7 +5,8 @@
     "pages/my-collect/my-collect",
     "pages/buy-history/buy-history",
     "pages/watch-history/watch-history",
-    "pages/product-detail/product-detail"
+    "pages/product-detail/product-detail",
+    "pages/shopping-car/shopping-car"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,6 +25,12 @@
         "text": "搜索",
         "iconPath": "images/search.png",
         "selectedIconPath": "images/search-on.png"
+      },
+      {
+        "pagePath": "pages/shopping-car/shopping-car",
+        "text": "购物车",
+        "iconPath": "images/cart.png",
+        "selectedIconPath": "images/cart-on.png"
       },
       {
         "pagePath": "pages/merber-center/merber-center",

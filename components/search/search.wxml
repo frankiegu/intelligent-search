@@ -1,0 +1,17 @@
+<!--components/search.wxml-->
+<view class="search-wrap">
+    <view class="search-area">
+        <icon type="search" class="search-icon" size="18" />
+        <input class="search-input"
+               type="text"
+               name="keyword"
+               value="{{keyword}}"
+               placeholder = "秋大衣"
+               bindconfirm="fnSearch"
+               bindinput="fnInput"
+               confirm-type="搜索">
+        </input>
+        <icon wx:if="{{keyword}}" type="clear" class="input-clear" size="16" catchtap="fnClearInput" />
+    </view>
+    <text class="search-btn" bindtap="fnSearch">搜索</text>
+</view>
