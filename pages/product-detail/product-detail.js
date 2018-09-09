@@ -115,6 +115,7 @@ Page({
     },
     // 去购物车
     goBuyCart () {
+        console.log('2342342342342')
         wx.navigateTo({
             url: '/pages/shopping-car/shopping-car'
         })
@@ -212,7 +213,6 @@ Page({
      * 点击增加数量
      */
     addProbability() {
-        console.log(1111)
         this.setData({
             buyCount: this.data.buyCount + 1
         })

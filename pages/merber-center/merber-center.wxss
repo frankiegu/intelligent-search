@@ -59,7 +59,7 @@
 .person {
     display: flex;
     height: 100rpx;
-    padding: 10rpx 30rpx;
+    padding: 5rpx 30rpx;
     border-bottom: 15rpx solid #f0f2f5
 }
 
@@ -90,27 +90,32 @@
 
 .member-buy {
     margin-left: 20rpx;
+    color: #666;
 }
 
 .icon-like {
-    width: 40rpx;
-    height: 40rpx;
+    width: 38rpx;
+    height: 38rpx;
 }
 
 .like {
     font-size: 28rpx;
-    padding: 10rpx 30rpx;
+    padding: 15rpx 30rpx;
     border-bottom: 15rpx solid #f0f2f5
 }
 
 .cloth-type {
-    display:flex;
+    display: flex;
     margin-left: 70rpx;
     padding: 10rpx 0;
     font-size: 26rpx;
 }
 
 .type {
-    color: #999;
+    color: #666;
+    margin-left: 20rpx;
+}
+
+.all {
     margin-left: 20rpx;
 }
