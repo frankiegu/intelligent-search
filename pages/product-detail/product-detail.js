@@ -148,11 +148,15 @@ Page({
             success: res => {
                 let data = res.data
                 if (data && data.success) {
+                    this.setData({
+                        showSelectProductPanel: false
+                    })
                     wx.showToast({
-                        title: '已成功加入了购物车',
+                        title: '加入成功',
                         icon: 'success',
                         duration: 2000
                     })
+
                 }
             },
             fail: err => {
