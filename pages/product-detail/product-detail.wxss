@@ -144,7 +144,7 @@
 }
 
 .img-large_height {
-    height: 8088rpx;
+    height: 4088rpx;
 }
 
 .img-small_height {
@@ -209,4 +209,37 @@
     left: 40rpx;
     right: 40rpx;
     background: #f02b2b !important;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+}
+
+.minus,
+.add {
+    width: 64rpx;
+    height: 64rpx;
+    border: 1px solid #e3e5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rpx;
+}
+
+.icon {
+    width: 18rpx;
+    height: 18rpx;
+}
+.num {
+    width: 64rpx;
+    height: 64rpx;
+    border: 1px solid #e3e5e9;
+    border-left: none;
+    border-right: none;
+    font-size: 24rpx;
+    color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

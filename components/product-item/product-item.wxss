@@ -68,3 +68,36 @@
     font-size: 32rpx;
     margin-left: 30rpx;
 }
+.count {
+    display: flex;
+    align-items: center;
+}
+
+.minus,
+.add {
+    width: 64rpx;
+    height: 32rpx;
+    border: 1px solid #e3e5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rpx;
+}
+
+.icon {
+    width: 18rpx;
+    height: 18rpx;
+}
+
+.icon-num {
+    width: 64rpx;
+    height: 32rpx;
+    border: 1px solid #e3e5e9;
+    border-left: none;
+    border-right: none;
+    font-size: 24rpx;
+    color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
